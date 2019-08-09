@@ -5,18 +5,25 @@
   "repository": "git@github.com:liuhui666/system.git",
   "author": "hui.liu <hui.liu@bianlifeng.com>",
   "license": "MIT",
-  "scripts":{
-    "server":"webpack-dev-server"
+  "scripts": {
+    "server": "webpack-dev-server"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-import": "^1.12.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^3.2.0",
+    "eslint": "^3.17.1",
+    "eslint-config-rnx": "^1.0.4",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "2.30.1",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^1.0.0",
     "url-loader": "^2.1.0",
@@ -24,7 +31,10 @@
     "webpack-dev-server": "^2.9.7"
   },
   "dependencies": {
+    "antd": "^3.21.2",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1"
   }
 }

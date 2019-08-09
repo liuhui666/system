@@ -3,8 +3,30 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const webpack = require('webpack');
 
+//Css module 和 ant的样式会产生冲突，打包自己写的css代码时用长沙市module  解析ant时不用
+const cssLoader = function (modules = true, loader = '') {
+  return ExtractTextPlugin.extract({
+    fallback: "style-loader",
+    use: loader ? [{
+      loader: "css-loader",
+      options: {
+        modules //开启css module  生成css局部作用域  
+      }
+    }, 'postcss-loader', loader] 
+    : {
+      loader: "css-loader",
+      options: {
+        modules //开启css module  生成css局部作用域  
+      }
+    },
+    
+  })
+}
 module.exports = {
-  entry: './src/app.js',
+  entry: {
+    index: './src/index.js',
+    vendor: ['react', 'react-dom', 'react-router-dom', 'antd']
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/bundle.js'
@@ -16,30 +38,33 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'react']
-          }
+            presets: ['env', 'react', 'stage-0'], //箭头函数解析报错 加上这个stage-0就好了
+            plugins: [
+              ["import", {
+                libraryName: "antd",
+                style: 'css'
+              }] // antd按需加载
+            ]
+          },
         }
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader"
-        })
+        use: cssLoader(),
+        exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        use: cssLoader(false),
+        include: /node_modules/
       },
       {
         test: /\.less$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: ["css-loader", "less-loader"]
-        })
+        use: cssLoader(true, 'less-loader')
       },
       {
         test: /\.sass$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: ["css-loader", "sass-loader"]
-        })
+        use: cssLoader(true, 'sass-loader')
       },
       {
         test: /\.(png|jpg|gif)$/,
@@ -74,8 +99,8 @@ module.exports = {
     new ExtractTextPlugin("css/[name].css"),
     // 提取公共模块
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'common',
-      filename: 'js/common.js'
+      name: 'vendor',
+      filename: 'js/vendor.js'
     }),
     new webpack.HotModuleReplacementPlugin()
   ],
@@ -83,6 +108,12 @@ module.exports = {
     port: 3000,
     contentBase: './dist',
     hot: true,
-    open: true
+    open: true,
+    historyApiFallback: true
+  },
+  resolve: {
+    alias: {
+      "BizComponent": path.resolve(__dirname, 'src/component')
+    }
   }
 }
