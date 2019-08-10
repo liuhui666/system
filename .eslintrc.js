@@ -3,7 +3,7 @@ module.exports = {
   globals: {
     __DEV__: false,
     B: false,
-    window: false,
+    window: true,
     document: false,
     fetch: false,
   },

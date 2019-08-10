@@ -33,6 +33,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './dist'),
+    publicPath: '/',
     filename: 'js/[name].js',
   },
   module: {
@@ -44,6 +45,7 @@ module.exports = {
         options: {
           presets: ['env', 'react', 'stage-0'], // 箭头函数解析报错 加上这个stage-0就好了
           plugins: [
+            'transform-decorators-legacy',
             ['import', {
               libraryName: 'antd',
               style: 'css',

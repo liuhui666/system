@@ -6,7 +6,7 @@ import TodoList from './view/ReduxDemo/TodoList';
 import NotFound from './view/Common/NotFound';
 
 
-export default class Routes extends Component {
+class Routes extends Component {
   render() {
     return (<Router>
       <Switch>
@@ -24,3 +24,5 @@ export default class Routes extends Component {
     </Router>);
   }
 }
+
+export default Routes;
