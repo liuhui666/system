@@ -120,6 +120,7 @@ module.exports = {
   resolve: {
     alias: {
       BizComponent: path.resolve(__dirname, 'src/component'),
+      BizAction: path.resolve(__dirname, 'src/action'),
     },
   },
 };

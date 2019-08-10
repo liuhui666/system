@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = state =>  // 参数就是store里的值
    ({
-     ...state,
+     ...state.TodoList,
    });
 const mapDispatchToProps = dispatch => ({ // 对store的数据修改  store.dispatch挂在到props
   inputChange: (e) => {
