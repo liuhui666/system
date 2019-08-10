@@ -32,10 +32,8 @@ module.exports = {
     vendor: ['react', 'react-dom', 'react-router-dom', 'antd'],
   },
   output: {
-    // publicPath: '/moliere',
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'js/bundle.js',
-    crossOriginLoading: process.env.NODE_ENV === 'production' ? 'anonymous' : false,
+    path: path.resolve(__dirname, './dist'),
+    filename: 'js/[name].js',
   },
   module: {
     rules: [{
@@ -64,14 +62,14 @@ module.exports = {
       use: cssLoader(false),
       include: /node_modules/,
     },
-    {
-      test: /\.less$/,
-      use: cssLoader(true, 'less-loader'),
-    },
-    {
-      test: /\.sass$/,
-      use: cssLoader(true, 'sass-loader'),
-    },
+    // {
+    //   test: /\.less$/,
+    //   use: cssLoader(true, 'less-loader'),
+    // },
+    // {
+    //   test: /\.sass$/,
+    //   use: cssLoader(true, 'sass-loader'),
+    // },
     {
       test: /\.(png|jpg|gif)$/,
       use: {
