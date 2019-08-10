@@ -25,8 +25,8 @@
     {
       "id": 14736,
       "parentId": 0,
-      "name": "Redux Demo",
-      "path": "/Redux",
+      "name": "ReduxDemo",
+      "path": "/ReduxDemo",
       "desc": "e981",
       "treeCode": "#0#14736#",
       "sort": 1,
@@ -44,8 +44,8 @@
         {
           "id": 14737,
           "parentId": 14736,
-          "name": "TODOList",
-          "path": "/ReduxDemo/TODOList",
+          "name": "ToDoList",
+          "path": "/ReduxDemo/ToDoList",
           "desc": "",
           "treeCode": "#0#14736#14737#",
           "sort": 0,
