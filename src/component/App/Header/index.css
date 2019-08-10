@@ -1,0 +1,32 @@
+.header{
+  background-color: #FFF;
+    height: 48px;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 999;
+    box-shadow: 3px 3px 4px 0 rgba(0,0,0,.05);
+    min-width: 1024px;
+}
+.exitContainer{
+  overflow: hidden;
+   color: #999999;
+  white-space: nowrap;
+ }
+ .avatarTitle{
+  height: 88px;
+  line-height: 88px;
+ }
+ .exit{
+   float: right;
+   cursor: pointer;
+ }
+ .name{
+   padding-left: 18px;
+   display: inline-block;
+   
+ }
+ .order_comp{
+  float: right;
+  margin-right: 50px;
+  margin-top: 10px;
+}

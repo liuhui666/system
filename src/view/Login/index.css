@@ -1,0 +1,127 @@
+html {
+  color: #666;
+  height: 100%;
+}
+
+body, p, div, img {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0 none;
+  vertical-align: baseline;
+}
+
+a {
+  text-decoration: none
+}
+
+.forbiddenWrapper {
+  min-width: 1000px;
+  height: 100%;
+  min-height: 476px;
+  position: relative;
+}
+
+.forbiddenInner {
+  height: 409px;
+  width: 900px;
+  margin: 170px  auto  0px auto;
+  position: relative;
+}
+.goHome{
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.forbiddenMoon {
+  width: 381px;
+  height: 371px;
+  float: right;
+  margin-top:30px;
+}
+
+.forbiddenTextBox {
+  width: 410px;
+  height: 409px;
+  float: left;
+  margin-left: 30px;
+}
+
+.forbiddenStatus {
+  font: normal bold 120px/1.4 DIN Alternate;
+  font-weight: 900;
+  letter-spacing:5px;
+}
+
+.forbiddenErr {
+  font-size: 26px;
+  color: #43464D;
+}
+.forbiddenRbacInfo{
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+
+.forbiddenTitle{
+  font: normal bold 18px PingFang SC;
+  line-height: 30px;
+  color:#616161;
+}
+
+.forbiddenRbacName{
+  font: normal  16px PingFang SC;
+  line-height: 30px;
+  color:#818181;
+}
+
+.forbiddenEmail{
+  font: normal  17px PingFang SC;
+  line-height: 30px;
+  color:#818181;
+}
+
+.forbiddenBtn {
+  margin-top: 48px;
+}
+
+.forbiddenBtnBack {
+  background: #FF5000;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  font-size: 18px;
+  height: 42px;
+  line-height: 42px;
+  padding: 0 23px;
+}
+
+.forbiddenMoon {
+  background-image: url('http://s.wormpex.com/res/bach-erp/image/403-1.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  margin-right: -35px;
+}
+
+.forbiddenCloudLeft{
+  width:215px;
+  height: 108px;
+  background-image: url('http://s.wormpex.com/res/bach-erp/image/403-3.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  left:260px;
+  top:-130px;
+}
+
+.forbiddenCloudRight{
+  width:150px;
+  height: 100px;
+  background-image: url('http://s.wormpex.com/res/bach-erp/image/403-2.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  right:-15px;
+  top:-120px;
+}
