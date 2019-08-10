@@ -1,6 +1,6 @@
 export default function createAction(type) {
-  return payloay => ({
+  return payload => ({
     type,
-    payloay,
+    payload,
   });
 }

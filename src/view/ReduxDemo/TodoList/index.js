@@ -3,6 +3,9 @@ import { Input, Button, List } from 'antd';
 import App from 'BizComponent/App';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import ToDoList from 'BizAction/ToDoList';
+
+const { inputChange, add, del } = ToDoList;
 
 const mapStateToProps = state =>  // 参数就是store里的值
    ({
@@ -10,24 +13,13 @@ const mapStateToProps = state =>  // 参数就是store里的值
    });
 const mapDispatchToProps = dispatch => ({ // 对store的数据修改  store.dispatch挂在到props
   inputChange: (e) => {
-    const action = {
-      type: 'change_input_value',
-      payload: e.target.value,
-    };
-    dispatch(action);
+    dispatch(inputChange(e.target.value));
   },
-  submit: () => {
-    const action = {
-      type: 'add_todo',
-    };
-    dispatch(action);
+  del: (index) => {
+    dispatch(del(index));
   },
-  delete: (index) => {
-    const action = {
-      type: 'del_todo',
-      payload: index,
-    };
-    dispatch(action);
+  add: () => {
+    dispatch(add());
   },
 });
 class TodoList extends Component {
@@ -42,7 +34,7 @@ class TodoList extends Component {
             style={{ width: 300 }}
             onChange={this.props.inputChange}
           />
-          <Button onClick={this.props.submit}>提交</Button>
+          <Button onClick={this.props.add}>提交</Button>
         </div>
         <List
           style={{ marginTop: '10px', width: '300px' }}
@@ -51,7 +43,7 @@ class TodoList extends Component {
           renderItem={(item, index) => (<List.Item>{
             <div style={{ display: 'flex', width: '100%' }}>
               <div style={{ flex: 1 }}>{item}</div>
-              <div style={{ width: 50, cursor: 'pointer' }}onClick={() => { this.props.delete(index); }}>删除</div>
+              <div style={{ width: 50, cursor: 'pointer' }}onClick={() => { this.props.del(index); }}>删除</div>
             </div>
           }</List.Item>)}
         />
@@ -63,8 +55,8 @@ TodoList.propTypes = {
   inputValue: PropTypes.string,
   list: PropTypes.array,
   inputChange: PropTypes.func,
-  submit: PropTypes.func,
-  delete: PropTypes.func,
+  add: PropTypes.func,
+  del: PropTypes.func,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
