@@ -29,7 +29,7 @@ module.exports = {
   devtool: 'inline-source-map',
   entry: {
     index: './src/index.js',
-    vendor: ['react', 'react-dom', 'react-router-dom', 'antd'],
+    vendor: ['react', 'react-dom', 'react-router-dom', 'antd', 'redux', 'mobx', 'react-redux', 'redux-thunk', 'mobx-react'],
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -64,10 +64,10 @@ module.exports = {
       use: cssLoader(false),
       include: /node_modules/,
     },
-    // {
-    //   test: /\.less$/,
-    //   use: cssLoader(true, 'less-loader'),
-    // },
+    {
+      test: /\.less$/,
+      use: cssLoader(true, 'less-loader'),
+    },
     // {
     //   test: /\.sass$/,
     //   use: cssLoader(true, 'sass-loader'),

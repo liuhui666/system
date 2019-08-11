@@ -1,0 +1,136 @@
+//
+///@table
+//
+
+.ant-table {
+  margin-bottom: 24px;
+  &-row:nth-child(even) {
+    background-color: #F5F5F5;
+  }
+  &-pagination {
+    float: none;
+    text-align: center;
+    margin: -8px 0 24px;
+  }
+  th.column-money,
+  td.column-money {
+    text-align: right!important;
+  }
+  .ant-table-thead > tr > th, 
+  .ant-table-tbody > tr > td{
+    padding:8px;
+  }
+}
+
+.ant-form .ant-table {
+  margin-bottom: 8px;
+}
+
+.simple-table {
+  padding-left: 15px;
+  padding-right: 40px;
+  .ant-table-placeholder,
+  .ant-table-bordered.ant-table-empty .ant-table-placeholder,
+  .ant-table-bordered .ant-table-body > table,
+  .ant-table-bordered .ant-table-thead > tr > th,
+  .ant-table-bordered .ant-table-tbody > tr > td {
+    border: none;
+  }
+  .ant-table-row:nth-child(even) {
+    background-color: #FFF;
+  }
+  .ant-table-thead > tr > th {
+    background-color: #FFF;
+    color: #4A4A4A;
+    text-align: right;
+    font-weight: 400;
+    padding: 4px;
+  }
+  .ant-table-thead > tr > th:nth-child(1) {
+    text-align: left;
+    width: 30%;
+  }
+  .ant-table-row > td:nth-child(2) {
+    width: 30%;
+  }
+ .ant-table-tbody > tr > td {
+    padding: 4px;
+    font-size: 14px;
+    a {
+      font-size: 14px;
+    }
+  }
+  .ant-table-wrapper {
+    margin-top: 24px;
+    .ant-table-pagination {
+      text-align: right;
+    }
+  }
+  .ant-table-small {
+    border: none;
+  }
+}
+.supplier-table {
+  .ant-table {
+    border-radius: 0;
+    table {
+      border-radius: 0;
+    }
+  }
+  .ant-table-thead > tr >th {
+    color: #666;
+  }
+  .ant-table-row:nth-child(even) {
+    background-color: #FFF;
+  }
+}
+
+// 嵌套 表格样式
+.component-table-nested .ant-table-tbody .ant-table-expanded-row:hover > td {
+  background-color: #fbfbfb;
+}
+.component-table-nested .ant-table-expanded-row > td:last-child {
+  padding: 0 48px 0 8px;
+}
+
+.component-table-nested .ant-table-expanded-row > td:last-child .ant-table-thead th {
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.component-table-nested .ant-table-expanded-row > td:last-child .ant-table-thead th:first-child {
+  padding-left: 0;
+}
+
+.component-table-nested .ant-table-expanded-row > td:last-child .ant-table-row td:first-child {
+  padding-left: 0;
+}
+
+.component-table-nested .ant-table-expanded-row .ant-table-row:last-child td {
+  border: none;
+}
+
+.component-table-nested .ant-table-expanded-row .ant-table-thead > tr > th {
+  background: none;
+}
+
+.component-table-nested .ant-table-row:nth-child(even) {
+  background-color: inherit;
+}
+
+.component-table-nested .ant-table-wrapper {
+  margin-bottom: -22px;
+  margin-left: 16px;
+}
+.component-table-nested .component-table-nested-inner {
+  .ant-table-tbody>tr>td,
+  .ant-table-thead>tr>th {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    // border-bottom: inherit;
+  }
+  .ant-table-body > table {
+    border: none;
+  }
+ 
+}
