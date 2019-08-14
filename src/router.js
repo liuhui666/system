@@ -4,6 +4,7 @@ import Login from './view/Login';
 import Home from './view/Home';
 import BindForm from './view/MobxDemo/BindForm';
 import TodoList from './view/ReduxDemo/TodoList';
+import Drag from './view/Mine/Drag';
 import NotFound from './view/Common/NotFound';
 
 
@@ -21,6 +22,7 @@ class Routes extends Component {
         <Route path="/Home" exact component={Home} />
         <Route path="/ReduxDemo/TodoList" exact component={TodoList} />
         <Route path="/MobxDemo/BindForm" exact component={BindForm} />
+        <Route path="/Mine/Drag" exact component={Drag} />
         <Route path="*" component={NotFound} />
       </Switch>
     </Router>);
