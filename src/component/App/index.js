@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <Layout className={styles.container}>
         <Sider />
-        <Layout>
+        <Layout className={styles.innerContainer}>
           <Header />
           <Content
             style={{
@@ -21,9 +21,10 @@ class App extends Component {
               padding: 24,
               background: '#fff',
               minHeight: 280,
+              height: '100%',
+              overflow: 'auto',
             }}
           >
-            这里是内容
             {
               this.props.children
             }
