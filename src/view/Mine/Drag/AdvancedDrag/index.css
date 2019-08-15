@@ -1,0 +1,41 @@
+.colWrapper{
+  border: 1px solid #d2d2d2;
+  flex-grow: 1;
+  width: 180px;
+  height: 100%;
+  margin: 0 2px;
+  background: #eee;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px
+}
+.colHeader{
+  height: 40px;
+  line-height: 40px;
+  background: #1DA921;
+  color: #fff;
+  text-align: center;
+}
+.listWrapper{
+  overflow: auto;
+  height: 100%;
+}
+.activeListWrapper{
+  background: #00ad23;
+  opacity: 0.1;
+}
+.item{
+  border: 1px solid #1da921;
+  width: 180px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 #b3b3b3;
+  margin: 5px auto;
+  background: #fff;
+  padding: 10px;
+  width: 200px;
+  cursor: move
+}
+.activeItem {
+  border-style: dashed;
+}
