@@ -32,9 +32,11 @@
   box-shadow: 0 0 5px 0 #b3b3b3;
   margin: 5px auto;
   background: #fff;
-  padding: 10px;
   width: 200px;
-  cursor: move
+  cursor: move;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
 }
 .activeItem {
   border-style: dashed;
