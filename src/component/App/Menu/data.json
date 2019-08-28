@@ -408,8 +408,8 @@
     {
       "id": 11472,
       "parentId": 0,
-      "name": "库存管理",
-      "path": "/moliere/web/OnStorage",
+      "name": "Form双绑怎么来的",
+      "path": "ManyForm",
       "desc": "e985",
       "treeCode": "#0#11472#",
       "sort": 5,
@@ -427,8 +427,8 @@
         {
           "id": 11473,
           "parentId": 11472,
-          "name": "库存查询",
-          "path": "/moliere/web/OnStorage/InventoryQuery/List",
+          "name": "JS实现表单",
+          "path": "/ManyForm/JSForm",
           "desc": "",
           "treeCode": "#0#11472#11473#",
           "sort": 0,

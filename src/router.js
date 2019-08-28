@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import Login from './view/Login';
 import Home from './view/Home';
+import JSFrom from './view/ManyForm/JSForm';
 import BindForm from './view/MobxDemo/BindForm';
 import TodoList from './view/ReduxDemo/TodoList';
 import Drag from './view/Mine/Drag';
@@ -20,6 +21,7 @@ class Routes extends Component {
         <Redirect from="/" to="/Home" exact />
         <Route path="/moliere/Login" exact component={Login} />
         <Route path="/Home" exact component={Home} />
+        <Route path="/ManyForm/JSForm" exact component={JSFrom} />
         <Route path="/ReduxDemo/TodoList" exact component={TodoList} />
         <Route path="/MobxDemo/BindForm" exact component={BindForm} />
         <Route path="/Mine/Drag" exact component={Drag} />
